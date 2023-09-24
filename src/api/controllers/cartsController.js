@@ -16,7 +16,7 @@ async function getCartByUserId(req, res) {
 async function updateCartByUserId(req, res) {
 	const role = req.role;
 	const { products } = req.body;
-  if (!products || products.length < 0) {return res.status(400).json('Must provide atleast 1 product.')}
+  if (!products || products.length === 0) {return res.status(400).json('Must provide atleast 1 product.')}
   const adminRequest = req.params.userId || req.user;
   const userId = role === 'admin' ? adminRequest : req.user;
   if (userId !== undefined && !userId.match(/^[a-f\d]{24}$/i)) { return res.status(400).json('Invalid ID format.') };

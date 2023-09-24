@@ -13,7 +13,7 @@ async function getCartByUserId(userId) {
   const moreThanOneCart = await cartModel.find({ 'user': userId }).exec();
   if (moreThanOneCart.length > 1) await cartModel.deleteMany({ 'user': userId }).exec();
 
-  const cartExists = await cartModel.findOne({ 'user': userId }).exec();
+  const cartExists = await cartModel.findOne({ 'user': userId }).populate('user', 'firstName lastName email').exec();
   if (!cartExists) {
     const newCart = await cartModel.create({ 'user': userId });
     databaseLog('ecoDent', 'carts', 'create', newCart._id);

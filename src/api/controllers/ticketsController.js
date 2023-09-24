@@ -2,6 +2,7 @@ import * as BLL from '../bll/ticketsBll.js'
 
 async function getTicketById(req, res) {
   const { ticketId } = req.params;
+  console.log(req.role)
   const isAdmin = req.role === 'admin';
   const userId = req.user;
   try {
