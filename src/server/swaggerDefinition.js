@@ -7,7 +7,7 @@ export const swaggerDefinition = {
         'This is an ecommerce service',
       license: {
         name: 'GNU General Public License 3.0',
-        url: 'https://github.com/edmondhillary/ECO-MMERCE-BACK/master/LICENSE'
+        url: 'https://github.com/edmondhillary/ECO-MMERCE-BACK/blob/master/LICENSE'
       },
       contact: {
         name: 'Github Repository',
