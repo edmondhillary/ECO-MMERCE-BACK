@@ -21,7 +21,7 @@ export const swaggerDefinition = {
       },
       {
         description: 'Development',
-        url: 'https://backend-nomadsociety-development.up.railway.app/'
+        url: 'por definir'
       },
       {
         description: 'Local Host',
