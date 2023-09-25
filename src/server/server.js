@@ -3,8 +3,6 @@ import cors from 'cors';
 import '../database/dbConnection.js'
 import middleware from './middleware.js';
 import router from './router.js';
-import * as dotenv from 'dotenv';
-dotenv.config();
 import { fileURLToPath } from 'url';
 import path from 'path';
 import fs from 'fs';
