@@ -17,7 +17,7 @@ export const swaggerDefinition = {
     servers: [
       {
         description: 'Production',
-        url: 'https://backend-nomadsociety-production.up.railway.app/'
+        url: 'por definirrrrrr'
       },
       {
         description: 'Development',
