@@ -1,6 +1,3 @@
-import * as fs from 'fs/promises'; // Para fs con promesas
-import util from 'util'; // Para util
-import { exec } from 'child_process'; // Para child_process
 
 async function build() {
   try {
@@ -9,8 +6,7 @@ async function build() {
     await exec('npm install'); // Instala dependencias
     await exec('npm run build'); // Ejecuta tu proceso de construcción
     
-    // Mueve los archivos construidos a la carpeta "build"
-    await fs.rename('ruta/a/tu/archivo/construido', 'build/tu-archivo-construido');
+  
 
     console.log('Construcción completada.');
   } catch (error) {
